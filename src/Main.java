@@ -23,7 +23,7 @@ public class Main {
                     try {
                         a = Double.valueOf(s2);
                     } catch (Exception e) {
-                        System.out.println(s + " - Error! Not number");
+                        fw.write(s + " = Error! Not number\n");
                         t = false;
                         break;
                     }
@@ -32,7 +32,7 @@ public class Main {
                     try {
                         b = Double.valueOf(s2);
                     } catch (Exception e2) {
-                        System.out.println(s + " - Error! Not number");
+                        fw.write(s + " = Error! Not number\n");
                         t = false;
                         break;
                     }
@@ -46,7 +46,7 @@ public class Main {
                         try {
                             sym = result(s3, sym);
                         } catch (Exception e3) {
-                            System.out.println(s + " - Operation Error!");
+                            fw.write(s + " = Operation Error!\n");
                         }
                     }
                 }
@@ -57,7 +57,7 @@ public class Main {
                 if (sym == '*') fw.write(String.format("%s * %s = %s\n", a, b, (a * b)));
                 if (sym == '/') {
                     if (b == 0) {
-                        System.out.println(s + " - Error! Division by zero");
+                        fw.write(s + " = Error! Division by zero\n");
                     } else {
                         fw.write(String.format("%s / %s = %s\n", a, b, (a / b)));
                     }
